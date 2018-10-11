@@ -54,3 +54,8 @@
     * SADD key member1 [member2] 向集合添加一个或多个成员
     * SRANDMEMBER key [count] 返回集合中一个或多个随机数
   * Sorted Set: 有序集合
+### 常用命令
+  * set key value [EX seconds] [PX milliseconds] [NX|XX]    
+     set key value ex 10 = setex key 10 value 将key的有效期设置为10秒
+     NX:（if Not eXist）只有键key不存在的时候才会设置key的值，通常用于实现锁机制    
+     XX：只有键key存在的时候才会设置key的值    
