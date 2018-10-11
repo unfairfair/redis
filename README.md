@@ -48,6 +48,9 @@
     * hmset key field value [field value ...]
     * hget key field
   * List: 列表
-    
+    * rpush key value [value ...],lpush key value [value ...]
+    * lrange key start stop,lpop key,rpop key
   * Set: 集合
+    * SADD key member1 [member2] 向集合添加一个或多个成员
+    * SRANDMEMBER key [count] 返回集合中一个或多个随机数
   * Sorted Set: 有序集合
