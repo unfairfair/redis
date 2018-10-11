@@ -42,7 +42,12 @@
 ## 基本
 ### 数据结构
   * String: 字符串
+    * set key "abc"
+    * get key
   * Hash: 散列
+    * hmset key field value [field value ...]
+    * hget key field
   * List: 列表
+    
   * Set: 集合
   * Sorted Set: 有序集合
