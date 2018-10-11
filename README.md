@@ -14,54 +14,25 @@
    6. copy redis安装目录下的 /utils/redis_init_script 至 _/etc/init.d/redis_
    7. 修改/etc/init.d/redis 文件中的配置：
 > #!/bin/sh
-### chkconfig: 2345 10 90
-# Simple Redis init.d script conceived to work on Linux systems
-# as it does use of the /proc filesystem.
+> ### chkconfig: 2345 10 90
+> # Simple Redis init.d script conceived to work on Linux systems
+> # as it does use of the /proc filesystem.
 
-### BEGIN INIT INFO
-# Provides:     redis_6379
-# Default-Start:        2 3 4 5
-# Default-Stop:         0 1 6
-# Short-Description:    Redis data structure server
-# Description:          Redis data structure server. See https://redis.io
-### END INIT INFO
+> ### BEGIN INIT INFO
+> # Provides:     redis_6379
+> # Default-Start:        2 3 4 5
+> # Default-Stop:         0 1 6
+> # Short-Description:    Redis data structure server
+> # Description:          Redis data structure server. See https://redis.io
+> ### END INIT INFO
 
-REDISPORT=6379
-EXEC=/etc/redis/src/redis-server
-CLIEXEC=/etc/redis/src/redis-cli
+> REDISPORT=6379
+> EXEC=/etc/redis/src/redis-server
+> CLIEXEC=/etc/redis/src/redis-cli
 
-PIDFILE=/var/run/redis_${REDISPORT}.pid
-CONF="/etc/redis/redis.conf"
-
-case "$1" in
-    start)
-        if [ -f $PIDFILE ]
-        then
-                echo "$PIDFILE exists, process is already running or crashed"
-        else
-                echo "Starting Redis server..."
-                $EXEC $CONF
-        fi
-        ;;
-    stop)
-        if [ ! -f $PIDFILE ]
-        then
-                echo "$PIDFILE does not exist, process is not running"
-        else
-                PID=$(cat $PIDFILE)
-                echo "Stopping ..."
-                $CLIEXEC -p $REDISPORT shutdown
-                while [ -x /proc/${PID} ]
-                do
-                    echo "Waiting for Redis to shutdown ..."
-                    sleep 1
-                done
-                echo "Redis stopped"
-        fi
-        ;;
-    *)
-        echo "Please use start or stop as first argument"
-        ;;
+> PIDFILE=/var/run/redis_${REDISPORT}.pid
+> CONF="/etc/redis/redis.conf"
+> ...
 > esac
 
 ## 基本命令
