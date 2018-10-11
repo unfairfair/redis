@@ -33,7 +33,7 @@
 > PIDFILE=/var/run/redis_${REDISPORT}.pid 
 > CONF="/etc/redis/redis.conf"   
 > ... 
-  esac   
+esac   
 
   配置文件中的①chkconfig: 2345 10 90，②Default-Start|Default-Stop 两种任选其一
 ## 基本命令
