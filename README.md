@@ -54,6 +54,8 @@
     * SADD key member1 [member2] 向集合添加一个或多个成员
     * SRANDMEMBER key [count] 返回集合中一个或多个随机数
   * Sorted Set: 有序集合
+    * ZADD key [NX|XX] [CH] [INCR] score member [score member ...]
+    
 ### 常用命令
   * set key value [EX seconds] [PX milliseconds] [NX|XX]    
      set key value ex 10 = setex key 10 value 将key的有效期设置为10秒    
@@ -62,3 +64,10 @@
   * GETSET key value ：给定 key 的值设为 value ，并返回 key 的旧值(old value)。    
   * MSET key value [key value ...],MGET key [key ...]    
   * incr key| incrby key increment| decrby key decrement|decr key    
+  * BLPOP key [key ...] timeout | BRPOP key [key ...] timeout :从list左|右边弹出value，若无value则阻塞x秒    
+  * RPOPLPUSH source destination | BRPOPLPUSH source destination timeout    
+  * SDIFF KEY1 [KEY2....] 返回key1中不同于其他set的元素    
+  
+  
+  
+  
