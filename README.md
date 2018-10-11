@@ -35,7 +35,7 @@
 > ...    
 > esac   
 
-  配置文件中的①chkconfig: 2345 10 90，②Default-Start|Default-Stop 两种任选其一
+  配置文件中的①chkconfig: 2345 10 90，②Default-Start|Default-Stop 两种任选其一 
   8. 添加redis服务： chkconfig --add redis
   9. 设置开机启动： chkconfig redis on
   10. 每当修改redis启动配置时： chkconfig redis reset
