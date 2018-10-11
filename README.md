@@ -58,7 +58,11 @@
     * ZRANGE KEY start end [WITHSCORES]
     * zrangebyscore zset1 -inf +inf ： inf==>infinity
   * Bit arrays (or simply bitmaps)
+    * SETBIT key offset value: 在key的offset位上设置值（只能0或1）
+    * GETBIT key offset: 获取key的offset位上的值
   * HyperLogLogs
+    * PFADD key element [element ...]  相当于set
+    * PFCOUNT key 只能统计元素个数
     
 ### 常用命令
   * set key value [EX seconds] [PX milliseconds] [NX|XX]    
