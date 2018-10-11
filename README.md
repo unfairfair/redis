@@ -11,6 +11,6 @@
    3. cd redis-4.0.11
    4. make
    5. 后台启动：修改conf文件中*daemonize no*的值为*yes*
-   6. copy redis安装目录下的*/utils/redis_init_script* 至 */etc/init.d/redis*
+   6. copy redis安装目录下的_/utils/redis_init_script_ 至 _/etc/init.d/redis_
    7. 修改*/etc/init.d/redis*文件中的配置：
 ## 基本命令
