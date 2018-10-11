@@ -55,6 +55,8 @@
     * SRANDMEMBER key [count] 返回集合中一个或多个随机数
   * Sorted Set: 有序集合
     * ZADD key [NX|XX] [CH] [INCR] score member [score member ...]
+    * ZRANGE KEY start end [WITHSCORES]
+    * zrangebyscore zset1 -inf +inf ： inf==>infinity
   * Bit arrays (or simply bitmaps)
   * HyperLogLogs
     
