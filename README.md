@@ -55,6 +55,8 @@
     * SRANDMEMBER key [count] 返回集合中一个或多个随机数
   * Sorted Set: 有序集合
     * ZADD key [NX|XX] [CH] [INCR] score member [score member ...]
+  * Bit arrays (or simply bitmaps)
+  * HyperLogLogs
     
 ### 常用命令
   * set key value [EX seconds] [PX milliseconds] [NX|XX]    
