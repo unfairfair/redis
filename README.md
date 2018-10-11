@@ -39,4 +39,10 @@
   8. 添加redis服务： chkconfig --add redis    
   9. 设置开机启动： chkconfig redis on    
   10. 每当修改redis启动配置时： chkconfig redis reset    
-## 基本命令
+## 基本
+### 数据结构
+  * String: 字符串
+  * Hash: 散列
+  * List: 列表
+  * Set: 集合
+  * Sorted Set: 有序集合
