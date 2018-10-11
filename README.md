@@ -17,7 +17,7 @@
 > \### chkconfig: 2345 10 90
 > \# Simple Redis init.d script conceived to work on Linux systems
 > \# as it does use of the /proc filesystem.
-
+>
 > \### BEGIN INIT INFO
 > \# Provides:     redis_6379
 > \# Default-Start:        2 3 4 5
@@ -25,11 +25,11 @@
 > \# Short-Description:    Redis data structure server
 > \# Description:          Redis data structure server. See https://redis.io
 > \### END INIT INFO
-
+>
 > REDISPORT=6379
 > EXEC=/etc/redis/src/redis-server
 > CLIEXEC=/etc/redis/src/redis-cli
-
+>
 > PIDFILE=/var/run/redis_${REDISPORT}.pid
 > CONF="/etc/redis/redis.conf"
 > ...
