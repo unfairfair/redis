@@ -19,20 +19,20 @@
 > \# as it does use of the /proc filesystem. 
 >
 > \### BEGIN INIT INFO  
-> \# Provides:     redis_6379
-> \# Default-Start:        2 3 4 5
-> \# Default-Stop:         0 1 6
-> \# Short-Description:    Redis data structure server
-> \# Description:          Redis data structure server. See https://redis.io
-> \### END INIT INFO
->
-> REDISPORT=6379
-> EXEC=/etc/redis/src/redis-server
-> CLIEXEC=/etc/redis/src/redis-cli
->
-> PIDFILE=/var/run/redis_${REDISPORT}.pid
-> CONF="/etc/redis/redis.conf"
-> ...
-> esac
+> \# Provides:     redis_6379 
+> \# Default-Start:        2 3 4 5  
+> \# Default-Stop:         0 1 6 
+> \# Short-Description:    Redis data structure server   
+> \# Description:          Redis data structure server. See https://redis.io  
+> \### END INIT INFO 
+>  
+> REDISPORT=6379  
+> EXEC=/etc/redis/src/redis-server  
+> CLIEXEC=/etc/redis/src/redis-cli  
+>  
+> PIDFILE=/var/run/redis_${REDISPORT}.pid 
+> CONF="/etc/redis/redis.conf"   
+> ... 
+> esac   
 
 ## 基本命令
