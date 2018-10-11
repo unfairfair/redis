@@ -56,6 +56,9 @@
   * Sorted Set: 有序集合
 ### 常用命令
   * set key value [EX seconds] [PX milliseconds] [NX|XX]    
-     set key value ex 10 = setex key 10 value 将key的有效期设置为10秒
-     NX:（if Not eXist）只有键key不存在的时候才会设置key的值，通常用于实现锁机制    
-     XX：只有键key存在的时候才会设置key的值    
+     set key value ex 10 = setex key 10 value 将key的有效期设置为10秒    
+     NX:（if Not eXist）只有键key不存在的时候才会设置key的值，通常用于实现锁机制，*set key 123 ex 5 nx*    
+     XX：只有键key存在的时候才会设置key的值  
+  * GETSET key value ：给定 key 的值设为 value ，并返回 key 的旧值(old value)。    
+  * MSET key value [key value ...],MGET key [key ...]    
+  * incr key| incrby key increment| decrby key decrement|decr key    
