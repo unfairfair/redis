@@ -13,7 +13,7 @@
    5. 后台启动：修改conf文件中*daemonize no*的值为*yes*
    6. copy redis安装目录下的 /utils/redis_init_script 至 _/etc/init.d/redis_
    7. 修改/etc/init.d/redis 文件中的配置：
-      `
+      `<
       #!/bin/sh
 ### chkconfig: 2345 10 90
 # Simple Redis init.d script conceived to work on Linux systems
@@ -64,6 +64,6 @@ case "$1" in
         echo "Please use start or stop as first argument"
         ;;
 esac
- `
+ >`
 
 ## 基本命令
